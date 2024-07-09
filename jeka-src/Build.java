@@ -22,7 +22,7 @@ class Build extends KBean {
      */
     @Override
     protected void init() {
-        project.flatFacade().setMainClass("auto");
+        project.flatFacade.setMainClass("auto");
 
     }
 
