@@ -4,8 +4,10 @@ A very basic calculator application created using Java **Swing**.
 
 ## Run the application from anywhere
 ```shell
-jeka -r https://github.com/djeang/Calculator-jeka.git -p
+jeka -r https://github.com/djeang/Calculator-jeka.git#0.0.1 -p
 ```
+
+On windows, you can create a Desktop shortcut with the above target.
 
 First run takes longer because JeKa clones the repo, downloads required JDK (if needed) and builds the application 
 behind the scene.
