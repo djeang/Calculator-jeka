@@ -7,7 +7,7 @@ A very basic calculator application created using Java **Swing**.
 jeka -r https://github.com/djeang/Calculator-jeka.git -p
 ```
 
-First run takes longer because JeKa clone the repo, download required JDK (if needed) and build the application 
+First run takes longer because JeKa clones the repo, downloads required JDK (if needed) and builds the application 
 behind the scene.
 
 `-r` option indicates that JeKa should be launched from this repo root.
