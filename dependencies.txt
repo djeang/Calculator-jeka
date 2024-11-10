@@ -1,8 +1,5 @@
 ==== COMPILE ====
-# com.fasterxml.jackson.core:jackson-core:2.16.1
 com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.2
-
-==== RUNTIME ====
 
 ==== TEST ====
 org.junit.jupiter:junit-jupiter:5.9.2

@@ -1,10 +1,10 @@
 # Jeka Demo - Calculator
 
-A very basic calculator application created using Java **Swing**.
+A very basic calculator application created using Java **Swing** and built with JeKa.
 
 ## Run the application from anywhere
 ```shell
-jeka -r https://github.com/djeang/Calculator-jeka.git#0.0.1 -p
+jeka -r https://github.com/djeang/Calculator-jeka.git#0.0.2 -p
 ```
 
 On windows, you can create a Desktop shortcut with the above target.
