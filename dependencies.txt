@@ -1,9 +1,11 @@
-==== COMPILE ====
+[compile]
 com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.2
 
-==== TEST ====
-org.junit.jupiter:junit-jupiter:5.9.2
-org.junit.jupiter:junit-jupiter-params:5.9.2
+[test]
+org.junit:junit-bom:5.13.1@pom
+org.junit.jupiter:junit-jupiter
+org.junit.platform:junit-platform-launcher
+
 
 
 
