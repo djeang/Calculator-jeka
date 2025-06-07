@@ -31,7 +31,7 @@ jeka -p
 To enable editing the Java source code from IntelliJ, execute:
 
 ```shell
-jeka intellij: iml initProject
+jeka intellij: sync
 ```
 
 ## More info
