@@ -26,7 +26,7 @@ from the repo root directory.
 ./jeka -p
 ```
 
-## Or Install the application locally
+## Or install the application locally
 ```shell
 jeka app: install repo=calculator@djeang runtime=BUNDLE
 ```
