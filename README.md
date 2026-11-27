@@ -35,6 +35,12 @@ Run the tests and create the jar in `jeka-output/`:
 ./jeka project: test pack
 ```
 
+This jar has no `Main-Class`, so `./jeka -p` then refuses to run it. Add `-c` to clean the output and rebuild it
+as a runnable jar:
+```shell
+./jeka -c -p
+```
+
 ## Or install the application locally
 
 ```shell
