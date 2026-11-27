@@ -1,44 +1,67 @@
 # JeKa Demo - Calculator
 
-A very basic calculator application created using Java 21 (**Swing**) and built with JeKa.
+A basic calculator desktop application written in Java (**Swing**) and built with JeKa.
+It shows how to run a GUI application directly from its Git repository, and how to install it as a
+self-contained desktop application (`bundle` KBean, based on *jpackage*).
 
+## Prerequisites
 
+- [JeKa installed](https://jeka-dev.github.io/jeka/installation/), for the `jeka` commands.
+  Commands starting with `./jeka`, run from a clone of this repository, don't need it.
+- Git and network access. JeKa downloads the JDK it needs.
 
 ## Run the application from anywhere
+
 ```shell
 jeka -r https://github.com/djeang/Calculator-jeka.git#0.0.3 -p
 ```
 
-First run takes longer because JeKa clones the repo, downloads required JDK (if needed) and builds the application 
-behind the scenes.
+On the first run, JeKa asks you to confirm that you trust this repository. The first run also takes longer
+because JeKa clones the repo, downloads the JDK (if needed) and builds the application.
 
-`-r` option followed by a URL indicates the remote repository to use as the project root.
+- `-r` followed by a URL makes JeKa use the Git repository as the project root. `#0.0.3` selects a tag.
+- `-p` runs the program once built. Arguments after `-p` are passed to the application.
 
-`-p` option indicates that we want to run the program, once built. 
-It may be followed by arguments that will be passed as program arguments to the application.
-
-## Or run the application from the repo 
-
-You can also clone the repo on your local machine and launch the application 
-from the repo root directory.
+## Or run the application from a clone
 
 ```shell
+git clone https://github.com/djeang/Calculator-jeka.git
+cd Calculator-jeka
 ./jeka -p
 ```
 
+Run the tests and create the jar in `jeka-output/`:
+```shell
+./jeka project: test pack
+```
+
 ## Or install the application locally
+
 ```shell
 jeka app: install repo=calculator@djeang runtime=BUNDLE
 ```
-Installs a standalone desktop app that runs without JeKa.
+
+`calculator@djeang` refers to this repository in the *djeang* catalog. This installs a standalone desktop
+application that runs without JeKa.
+
+To create the bundle (a `.dmg` on macOS) in `jeka-output/` from a clone, run:
+```shell
+./jeka bundle: pack
+```
 
 ## Edit in IntelliJ
 
 To enable editing the Java source code from IntelliJ, execute:
 
 ```shell
-./jeka intellij:sync
+./jeka intellij: sync
 ```
+
+## How it works
+
+- [jeka.properties](jeka.properties): JeKa and Java versions, and the icons used by *jpackage* per platform.
+- [jeka.project.deps](jeka.project.deps): compile and test dependencies.
+- `jeka` and `jeka.ps1`: scripts that run JeKa without installing it.
 
 ## More info
 
@@ -46,8 +69,11 @@ To enable editing the Java source code from IntelliJ, execute:
 ./jeka --help
 ```
 
+- [Source-runnable applications](https://jeka-dev.github.io/jeka/tutorials/source-runnable-apps/)
+- [app KBean](https://jeka-dev.github.io/jeka/reference/kbeans-app/) and
+  [bundle KBean](https://jeka-dev.github.io/jeka/reference/kbeans-bundle/)
+
 ## Screenshots
 
 ![Calculator - Standard Light](screenshots/standard-light.png)
 ![Calculator - Scientific Dark](screenshots/scientific-dark.png)
-
